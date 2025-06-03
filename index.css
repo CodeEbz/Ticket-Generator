@@ -1,0 +1,249 @@
+#ticketDisplayArea {
+  display: none; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px; 
+  margin: auto;
+  color: white;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0; 
+  padding: 0;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#idForForm, #ticketDisplayArea {
+  max-width: 600px;
+  width: 90%; 
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); 
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#idForForm input:not([type="file"]), #idForForm select { 
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: white; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border: 1px solid #ccc;
+}
+
+label {
+  margin: 3px 0;
+  font-weight: bold;
+  color: white;
+  display: block;
+}
+
+input {
+  width: 100%;
+  font-size: 16px;
+  background-color: rgba(0, 123, 255, 0.062);
+  color: white; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#uploadZone {
+  background-color: rgba(0, 123, 255, 0.062); 
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px dashed white;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  height: 100px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px; 
+}
+
+input[type="file"] {
+  display: none; 
+}
+
+#generateTicket {
+  background-color: rgba(241, 164, 20, 0.788);
+  width: 100%;
+  margin-top: 20px;
+  color: rgb(2, 2, 2);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#h3Coding {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#generateTicket:hover {
+  background-color: rgba(241, 164, 20, 0.9);
+  transform: scale(1.05);
+}
+
+#changeImageBtn,
+#removeImageBtn {
+  background-color: rgba(30, 192, 178, 0.788);
+  color: rgb(2, 2, 2);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; 
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: auto; 
+  height: auto; 
+  margin: 5px; 
+  display: inline-block; 
+}
+
+#avatarControls {
+  display: flex; 
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#avatarPreview {
+  max-width: 150px; 
+  max-height: 150px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  display: block;
+  margin: 10px auto; 
+}
+
+.error-message {
+  color: #ff6b6b; 
+  font-size: 0.9em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#ticketDisplayArea {
+  background-color: rgba(0, 0, 0, 0.8); 
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  margin-top: 20px; 
+}
+
+#ticketDisplayArea h1, #ticketDisplayArea h3 {
+  color: #ffd700; 
+  margin-bottom: 10px;
+}
+
+#ticketDisplayArea p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+#ticketAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffd700;
+  margin: 20px auto;
+  display: block;
+}
+
+#ticketFullName, #ticketEmail, #ticketGitHub {
+  display: block; 
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#generateAnotherTicketBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#generateAnotherTicketBtn:hover {
+  background-color: #0056b3;
+}
+
+#idForForm h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#idForForm p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Generator</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+ <div id="idForForm">
+  <form>
+    <div>
+      <div id="h3Coding">
+        <h3>Coding Conf</h3>
+      </div>
+    </div>
+         
+    <h1>Your Journey To Coding Conf 2025 Starts Here!</h1>
+    <p>Welcome to the Coding Conference 2025. Fill out the form below to generate your ticket.</p>
+    <p>Happy coding!</p>
+    <br><br>
+         
+    <div>
+      <label>Upload Avatar</label>
+      <div id="uploadZone">
+        <p style="font-size: 15px;">Drag and drop or click to select a file.</p>
+        <p style="font-size: 9px; margin-top: 1px;">⭕Upload your photo (JPG or PNG format, Max size 5MB).</p>
+      </div>
+       
+      <input type="file" id="avatarUpload" accept="image/jpeg, image/png" style="display: none;">
+       
+      <div id="avatarError" class="error-message"></div>
+       
+      <img id="avatarPreview" src="" alt="Avatar Preview" style="display: none;">
+      <div id="avatarControls" style="display: none;">
+        <button id="changeImageBtn" type="button">Change Image</button>
+        <button id="removeImageBtn" type="button">Remove Image</button>
+      </div>
+    </div><br>
+     
+    <div class="form-group">
+      <label for="fullNameInput">Full Name:</label>
+      <input type="text" id="fullNameInput" placeholder="Chin Neeza" required>
+      <div id="fullNameError" class="error-message"></div>
+    </div><br>
+           
+    <div class="form-group">
+      <label for="emailInput">Email:</label>
+      <input type="email" id="emailInput" placeholder="chinneeza@gmail.com" required>
+      <div id="emailError" class="error-message"></div>
+     </div><br>
+           
+    <div class="form-group">
+      <label for="usernameInput">GitHub Username: </label>
+      <input type="text" id="usernameInput" placeholder="chinneeza101" required>
+      <div id="usernameError" class="error-message"></div>
+    </div>
+     
+    <button type="submit" id="generateTicket">Generate My Ticket</button>
+  </form>
+</div>
+
+<div id="ticketDisplayArea">
+  <h1>Congrats!</h1><br><br>
+  <p>Your ticket has been generated successfully.</p>
+  <img id="ticketAvatar" alt="Ticket Avatar">
+  <h3>Coding Conference</h3>
+  <p>May 30, 2025 / Austin Ave, TX.</p>
+  <span id="ticketFullName"></span><br>
+  <span id="ticketEmail"></span><br>
+  <span id="ticketGitHub"></span>
+  <button id="generateAnotherTicketBtn" type="button">Generate Another Ticket</button>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
