@@ -1,196 +1,50 @@
-#ticketDisplayArea {
-  display: none; 
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 400px; 
-  margin: auto;
-  color: white;
-}
-
-body {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100vw;
-  margin: 0; 
-  padding: 0;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-#idForForm, #ticketDisplayArea {
-  max-width: 600px;
-  width: 90%; 
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7); 
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-#idForForm input:not([type="file"]), #idForForm select { 
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  color: white; 
-  background-color: rgba(255, 255, 255, 0.1); 
-  border: 1px solid #ccc;
-}
-
-label {
-  margin: 3px 0;
-  font-weight: bold;
-  color: white;
-  display: block;
-}
-
-input {
-  width: 100%;
-  font-size: 16px;
-  background-color: rgba(0, 123, 255, 0.062);
-  color: white; 
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.3s ease;
-}
-
-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+body {
   font-family: 'Courier New', Courier, monospace;
-}
-
-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-input:-moz-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-#uploadZone {
-  background-color: rgba(0, 123, 255, 0.062); 
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  padding: 20px;
-  border-radius: 5px;
-  border: 1px dashed white;
-  transition: background-color 0.3s ease;
+  font-size: clamp(16px, 2vw, 20px);
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   width: 100%;
-  height: 100px; 
-  display: flex; 
-  flex-direction: column; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 10px; 
 }
 
-input[type="file"] {
-  display: none; 
-}
-
-#generateTicket {
-  background-color: rgba(241, 164, 20, 0.788);
+form {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-top: 20px;
-  color: rgb(2, 2, 2);
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#h3Coding {
-  text-align: center;
+  max-width: 500px;
+  margin: auto;
   color: white;
-  font-size: 30px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-#generateTicket:hover {
-  background-color: rgba(241, 164, 20, 0.9);
-  transform: scale(1.05);
-}
-
-#changeImageBtn,
-#removeImageBtn {
-  background-color: rgba(30, 192, 178, 0.788);
-  color: rgb(2, 2, 2);
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px; 
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  width: auto; 
-  height: auto; 
-  margin: 5px; 
-  display: inline-block; 
-}
-
-#avatarControls {
-  display: flex; 
-  justify-content: center;
-  margin-top: 10px;
-}
-
-#avatarPreview {
-  max-width: 150px; 
-  max-height: 150px; 
-  border-radius: 50%; 
-  object-fit: cover; 
-  display: block;
-  margin: 10px auto; 
-}
-
-.error-message {
-  color: #ff6b6b; 
-  font-size: 0.9em;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-weight: bold;
+  padding: 20px;
 }
 
 #ticketDisplayArea {
-  background-color: rgba(0, 0, 0, 0.8); 
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 30px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-  margin-top: 20px; 
+  margin-top: 20px;
+  width: 90%;
+  max-width: 600px;
 }
 
 #ticketDisplayArea h1, #ticketDisplayArea h3 {
-  color: #ffd700; 
+  color: #ffd700;
   margin-bottom: 10px;
 }
 
@@ -210,7 +64,7 @@ input[type="file"] {
 }
 
 #ticketFullName, #ticketEmail, #ticketGitHub {
-  display: block; 
+  display: block;
   font-size: 1.2em;
   margin-bottom: 5px;
   font-weight: bold;
@@ -230,6 +84,136 @@ input[type="file"] {
 
 #generateAnotherTicketBtn:hover {
   background-color: #0056b3;
+}
+
+#idForForm, #ticketDisplayArea {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#idForForm input:not([type="file"]), 
+#idForForm select {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+label {
+  margin: 3px 0;
+  font-weight: bold;
+  color: white;
+  display: block;
+}
+
+input {
+  width: 100%;
+  font-size: 16px;
+  background-color: rgba(0, 123, 255, 0.062);
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#uploadZone {
+  background-color: rgba(0, 123, 255, 0.062);
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px dashed white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#generateTicket {
+  background-color: rgba(241, 164, 20, 0.788);
+  width: 100%;
+  margin-top: 20px;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#generateTicket:hover {
+  background-color: rgba(241, 164, 20, 0.9);
+  transform: scale(1.05);
+}
+
+#h3Coding {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#changeImageBtn,
+#removeImageBtn {
+  background-color: rgba(30, 192, 178, 0.788);
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px;
+  display: inline-block;
+}
+
+#avatarControls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#avatarPreview {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 10px auto;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.9em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 #idForForm h1 {
